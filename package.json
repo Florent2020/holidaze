@@ -2,7 +2,6 @@
   "name": "holidaze",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://florent-hajdari.com/holidaze",
   "dependencies": {
     "@hookform/resolvers": "^2.5.2",
     "@react-google-maps/api": "^2.2.0",
