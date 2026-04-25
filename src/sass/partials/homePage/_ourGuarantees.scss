@@ -1,0 +1,42 @@
+.our--guarantees {
+  background-color: $colour-secondary;
+  padding: 70px 0;
+  margin: 70px 0;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 2px;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $colour-primary;
+  }
+
+  & h2 {
+    text-align: center;
+    color: $colour-heading;
+  }
+
+  & .col-md-4.col-12 {
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  & i,
+  span {
+    margin-right: 10px;
+    font-size: 16px;
+    color: $colour-heading;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+  }
+
+  & .fa-tags {
+    transform: rotate(90deg);
+  }
+}
+//

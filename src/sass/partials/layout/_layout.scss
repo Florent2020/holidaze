@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: $body-font-family;
+  background: $light-background-color;
+  color: $light-text-color;
+}
+
+body.light {
+  background: url(../../../images/bg_texture.jpg);
+  color: $light-text-color;
+  transition: background 0.5s ease-out;
+  background-size: cover;
+  height: 100vh;
+}
+
+body.dark {
+  background-color: $dark-background-color;
+  color: $dark-text-color;
+  transition: background-color 0.5s ease-out;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+.btn-primary,
+.btn-info {
+  background-color: $colour-primary;
+  border-color: $colour-primary;
+  text-transform: uppercase;
+  color: $colour-secondary;
+  font-weight: 600;
+}
+
+button:hover,
+.btn-primary:hover,
+button:focus,
+.btn-primary:focus,
+.btn-info:hover,
+.btn-info:focus {
+  background-color: rgba(215, 182, 0, 0.8);
+  color: $colour-secondary;
+  border: 1px solid rgba(215, 182, 0, 0.8);
+  box-shadow: none;
+}
+
+.btn-warning:focus,
+.btn-warning.focus {
+  box-shadow: none;
+}
+
+input:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  background-image: none !important;
+  color: -internal-light-dark(white) !important;
+}
+
+input.search--input__search {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  position: relative;
+  border-left: 6px solid $colour-primary;
+  padding: 9px 10px;
+  width: 300px;
+  margin-left: 15px;
+  margin-bottom: 30px;
+  color: $colour-heading;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+.bg {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: $tablet-width) {
+  main {
+    position: relative;
+    top: 127px;
+  }
+}

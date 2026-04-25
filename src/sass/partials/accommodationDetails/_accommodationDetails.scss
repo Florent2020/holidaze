@@ -1,0 +1,255 @@
+.detail--page {
+  position: relative;
+
+  & .banner {
+    position: relative;
+
+    & h1 {
+      position: absolute;
+      font-family: $SubHeading-font-family;
+      top: 50%;
+      transform: translate(21%, -50%);
+      z-index: 999;
+      color: $colour-primary;
+      width: 70%;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .shadow {
+      background-color: $colour-secondary;
+      position: absolute;
+      width: 80%;
+      height: 25%;
+      top: 50%;
+      transform: translate(13%, -50%);
+      opacity: 0.6;
+      z-index: 10;
+      border: 1px solid #a2a1a1;
+    }
+  }
+
+  & .carousel img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  & .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+
+  & .carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid $colour-secondary;
+  }
+
+  & .details--info {
+    background: white;
+    padding: 25px;
+    margin: 70px 0;
+    box-shadow: 0 3px 10px;
+    border-radius: 5px;
+    color: $colour-secondary;
+
+    & .title--detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 25px;
+
+      & .hotel--stars {
+        padding-left: 0;
+      }
+
+      & i {
+        font-size: 26px;
+        margin-left: 0;
+        color: $colour-primary;
+        font-size: 28px;
+      }
+    }
+
+    & h2 {
+      font-family: $SubHeading-font-family;
+      font-size: 30px;
+      letter-spacing: 1px;
+    }
+
+    & p {
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    & i {
+      margin-right: 10px;
+      color: $colour-secondary;
+    }
+
+    & .description {
+      margin: 50px 0;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    & .sticky--detail {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    & .fa-utensils {
+      font-size: 16px;
+    }
+
+    & .fa-wifi {
+      font-size: 12px;
+    }
+
+    & .fa-parking {
+      font-size: 17px;
+    }
+
+    & .cancellation {
+      flex: 1 0 auto;
+    }
+
+    & .stay {
+      margin-top: 35px;
+      margin-bottom: 5px;
+    }
+
+    & .price {
+      margin-bottom: 20px;
+      font-size: 29px;
+      font-weight: 700;
+    }
+
+    & .accommodation--button {
+      flex-shrink: 0;
+    }
+
+    & button {
+      width: 100%;
+      position: relative;
+      padding: 0.6rem 0.75rem !important;
+      border-radius: 0;
+      border: 2px solid $colour-primary;
+
+      &:hover {
+        border: 2px solid $colour-secondary;
+      }
+    }
+
+    & button::before {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 47px;
+      left: -2px;
+      bottom: -2px;
+      background-color: #262626;
+    }
+
+    & .map {
+      margin-top: 30px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    & .banner {
+      position: relative;
+
+      & h1 {
+        position: absolute;
+        font-family: $SubHeading-font-family;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+        color: $colour-primary;
+        font-size: 35px;
+      }
+
+      .shadow {
+        width: 700px;
+        height: 150px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #a2a1a1;
+      }
+    }
+
+    & .carousel img {
+      height: 600px !important;
+    }
+
+    & .details--info {
+      & .title--detail {
+        flex-direction: row;
+        margin-bottom: 0;
+        align-items: center;
+
+        & i {
+          margin-left: 5px;
+        }
+      }
+
+      & .location {
+        & > br {
+          display: none;
+        }
+
+        & .fa-phone-alt {
+          margin-left: 25px;
+        }
+      }
+
+      & button {
+        width: 210px;
+      }
+
+      & .map {
+        margin-top: 0 !important;
+      }
+    }
+  }
+
+  @media (min-width: 772px) and (max-width: 992px) {
+    & .details--info .map {
+      margin-top: 0 !important;
+    }
+  }
+}
+
+body.dark .details--info {
+  background-color: rgba(0, 0, 0, 0.89) !important;
+  box-shadow: 0 0 10px #626262;
+  color: #fefefe;
+  transition: background-color 0.5s ease-out;
+
+  & i {
+    color: #fefefe;
+    transition: color 0.5s ease-out;
+  }
+}
+
+body.dark {
+  .detail--page .details--info h2 {
+    color: $colour-primary;
+  }
+
+  .detail--page .details--info .price {
+    color: $colour-primary;
+  }
+}
+
+.gm-style-mtc button::before,
+.gm-style button::before {
+  content: none;
+  width: 0 !important;
+}

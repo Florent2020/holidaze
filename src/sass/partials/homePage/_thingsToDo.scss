@@ -1,0 +1,100 @@
+.things--to--do {
+  position: relative;
+  margin-bottom: 50px;
+
+  & .col-lg-3 {
+    display: flex;
+    margin-bottom: 25px;
+  }
+
+  & .things--to--do__subheading {
+    position: relative;
+    text-align: center;
+    margin: 30px 0 110px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 150px;
+      height: 2px;
+      top: 81px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $colour-primary;
+    }
+  }
+
+  & .card-img,
+  .card-img-top {
+    height: 210px !important;
+  }
+
+  & .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: none;
+  }
+
+  & .on--hover {
+    padding: 0;
+    font-style: normal;
+  }
+
+  & .card {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  & .card-body {
+    color: $colour-secondary;
+  }
+
+  & .card-text {
+    flex: 1 0 auto;
+    font-size: 14px;
+    text-transform: initial;
+    font-weight: normal;
+  }
+
+  & .card-link {
+    flex-shrink: 0;
+    font-style: italic;
+    font-weight: 500;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+
+  & .card-link:hover {
+    text-decoration: underline;
+  }
+
+  & .card-body:hover,
+  .on--hover:hover {
+    text-decoration: none;
+  }
+}
+
+body.dark {
+  .things--to--do {
+    & .card-body,
+    .on--hover {
+      color: $colour-heading;
+    }
+    & .card-title {
+      font-size: 16px;
+    }
+    & .card-link {
+      color: $colour-primary;
+    }
+
+    & .card-link:hover {
+      text-decoration: underline;
+    }
+
+    & .card-body:hover,
+    .on--hover:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,209 @@
+.accommodation--list {
+  margin-bottom: 100px;
+  padding-top: 30px;
+}
+
+.accommodation--list__subheading {
+  text-align: center;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 2px;
+    background-color: $colour-primary;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+  }
+}
+
+.card {
+  border-radius: 10px !important;
+  background-color: $colour-heading;
+  box-shadow: 0 0 10px $colour-secondary;
+  border: none;
+  color: $colour-secondary;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  transition: transform 0.5s;
+
+  &:hover {
+    position: relative;
+    transform: translateY(-15px);
+  }
+
+  & button:hover,
+  button:focus {
+    border: 2px solid $colour-secondary;
+  }
+}
+
+body.dark .dark--card {
+  background-color: rgba(0, 0, 0, 0.89) !important;
+  box-shadow: 0 0 10px #353535;
+  color: $colour-heading;
+  transition: background-color 0.5s ease-out;
+  transition: transform 0.5s;
+
+  &:hover {
+    position: relative;
+    transform: translateY(-15px);
+  }
+}
+
+.card-img,
+.card-img-top {
+  height: 230px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+
+.pages {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px -15px 0;
+
+  & .col-md-4.col-12 {
+    display: flex;
+  }
+
+  & > .col-lg-4.col-md-6.col-12 {
+    margin-bottom: 30px;
+  }
+
+  & .card-title {
+    padding: 15px 15px 0;
+    margin-bottom: 0;
+  }
+
+  & h5 {
+    font-size: 19px;
+  }
+
+  & .card-text {
+    padding: 0 15px;
+    margin-bottom: 0;
+    flex: 1;
+  }
+
+  & .type {
+    position: absolute;
+    padding: 7px 12px;
+    color: $colour-heading;
+    font-weight: 500;
+    font-size: 18px;
+    background-color: rgba(38, 38, 38, 0.7);
+    border-top-left-radius: 10px;
+  }
+
+  & .trips {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    background-color: $colour-heading;
+    opacity: 0.8;
+    padding: 4px 7px !important;
+    border: 1px solid $colour-secondary;
+    border-radius: 5px;
+
+    & i {
+      color: $colour-secondary;
+      font-size: 22px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        color: $colour-error;
+      }
+    }
+  }
+
+  & .location {
+    font-size: 10px;
+    margin-bottom: 5px;
+
+    & i {
+      font-size: 9px;
+      margin-right: 5px;
+    }
+  }
+
+  & .hotel--stars {
+    padding-left: 15px;
+
+    & i {
+      color: $colour-primary;
+      margin: 5px 3px 30px 0;
+      font-size: 18px;
+    }
+  }
+
+  & .stay {
+    font-size: 10px;
+    margin-bottom: 2px !important;
+  }
+
+  & .price {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  & .accommodation--button {
+    position: relative;
+    padding: 0 15px 20px;
+  }
+
+  & .accommodation--button button {
+    width: 100%;
+    position: relative;
+    padding: 0.6rem 0.75rem !important;
+    border-radius: 0;
+    border: 2px solid $colour-primary;
+
+    &:hover {
+      border: 2px solid $colour-secondary;
+    }
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 47.5px;
+      left: -2px;
+      bottom: -2px;
+      background-color: $colour-secondary;
+    }
+  }
+
+  & .remove {
+    margin: 0 15px 20px;
+    padding: 0.6rem 0.75rem !important;
+    border-radius: 0;
+    display: none;
+
+    & i {
+      margin-right: 10px;
+    }
+  }
+}
+
+body.dark {
+  .accommodation--list__subheading {
+    color: $colour-primary;
+  }
+
+  .pages .type {
+    color: $colour-primary;
+  }
+}
+
+.fas.fa-heart {
+  color: $colour-error !important;
+}

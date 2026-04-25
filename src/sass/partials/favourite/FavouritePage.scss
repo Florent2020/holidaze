@@ -1,0 +1,45 @@
+.favourites {
+  & h1 {
+    font-size: 31px;
+    margin: 30px 0 40px;
+    font-family: $SubHeading-font-family;
+  }
+  & .pages .trips {
+    display: none;
+  }
+  & .pages .remove {
+    display: block;
+    background-color: $colour-secondary;
+  }
+
+  & .pages .accommodation--button {
+    padding-bottom: 10px;
+  }
+
+  & .pages .btn-primary {
+    border: 2px solid $colour-primary;
+
+    &:hover {
+      border: 2px solid $colour-secondary;
+    }
+  }
+}
+
+body.dark {
+  .favourites {
+    & h1 {
+      color: $colour-heading;
+    }
+    & .pages .remove {
+      border-color: $colour-primary;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .favourites {
+    & h1 {
+      font-size: 35px;
+    }
+  }
+}

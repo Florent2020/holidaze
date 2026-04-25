@@ -1,0 +1,9 @@
+.alert-danger {
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  position: fixed;
+  justify-content: center;
+}

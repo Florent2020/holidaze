@@ -1,0 +1,99 @@
+// Edit page on Admin
+
+.edit--admin {
+  & .edit--page {
+    background-color: rgba(38, 38, 38, 0.7);
+    padding: 20px;
+    border-radius: 5px;
+
+    & .edit--line {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  & .col-md-6.col-sm-12 {
+    margin-bottom: 0;
+  }
+
+  & .form-label {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2px;
+  }
+
+  & .form-control {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    position: relative;
+    border-left: 3px solid $colour-primary;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  & .btn-info {
+    width: 49%;
+    margin-right: 2%;
+
+    & i {
+      padding-right: 10px;
+    }
+  }
+
+  & .btn-warning {
+    width: 49%;
+    background-color: $colour-error;
+    color: $colour-heading;
+    font-weight: 600;
+    border-color: $colour-error;
+
+    &:hover {
+      background-color: rgba(197, 49, 49, 0.8);
+    }
+
+    & i {
+      padding-right: 10px;
+    }
+  }
+}
+
+.form-row > .col,
+.form-row > [class*="col-"] {
+  min-width: 100%;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+div.form-error {
+  color: $colour-error !important;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.5s ease-in-out !important;
+}
+
+div.form-error::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: calc(100% - 3px);
+  height: 3px;
+  background-color: $colour-error;
+  left: 3px;
+  top: -3px;
+  transition: background-color 0.5s ease-in-out !important;
+}
+
+@media (min-width: $tablet-width) {
+  .edit--admin {
+    & .edit--page {
+      padding: 50px;
+    }
+  }
+
+  .form-row > .col,
+  .form-row > [class*="col-"] {
+    min-width: auto;
+  }
+}

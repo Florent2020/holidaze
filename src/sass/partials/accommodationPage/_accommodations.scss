@@ -1,0 +1,295 @@
+.page {
+  h1 {
+    font-size: 40px !important;
+  }
+
+  .accommodations--banner {
+    & p {
+      font-size: 19px;
+    }
+  }
+}
+
+.accommodations--page {
+  position: relative;
+
+  & h2 {
+    font-size: 27px;
+  }
+
+  & .search--div {
+    display: flex;
+    margin: 25px 0 5px;
+  }
+
+  & .form-group {
+    margin-bottom: 0;
+    position: relative;
+    background-color: $colour-secondary;
+    padding: 4px;
+    max-width: 100%;
+    border-left: 6px solid $colour-primary;
+    text-align: left;
+  }
+
+  & .fa-search {
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #495057;
+    left: 10px;
+
+    &:focus {
+      color: $colour-heading;
+    }
+  }
+
+  & .form-control.search {
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    position: relative;
+    border: 1px solid $colour-secondary;
+    padding-left: 35px;
+    background-color: transparent;
+  }
+
+  & .form-control:focus {
+    box-shadow: none;
+    background-color: $colour-secondary;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  & button {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    text-transform: capitalize;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  & .row {
+    margin-left: 15px;
+    margin-right: 0px;
+  }
+
+  & .accommodation-box {
+    margin-bottom: 30px !important;
+  }
+
+  & .card {
+    flex-direction: column;
+    margin-right: 15px;
+
+    &:hover {
+      transform: none;
+    }
+
+    & .type {
+      padding: 7px 12px !important;
+    }
+  }
+
+  & .col-12 {
+    padding-left: 0;
+    padding-right: 0;
+    // flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  & .col-md-7 {
+    padding: 20px;
+  }
+
+  & .card-img,
+  .card-img-top {
+    height: auto;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+
+  & .card-title {
+    margin-bottom: 10px;
+  }
+
+  & h5 {
+    font-size: 20px;
+  }
+
+  & .title--detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+
+    & h3 {
+      font-size: 22px;
+    }
+
+    & .hotel--stars {
+      padding-left: 0;
+    }
+
+    & i {
+      font-size: 18px;
+      margin: 3px 1px;
+    }
+  }
+
+  & .card-title,
+  .card-text {
+    padding: 0;
+  }
+
+  & .description {
+    font-size: 15px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    height: 19%;
+  }
+
+  & .accommodation--button {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page {
+    h1 {
+      font-size: 50px !important;
+    }
+
+    .accommodations--banner {
+      & p {
+        font-size: 21px;
+      }
+    }
+  }
+
+  .accommodations--page {
+    & h2 {
+      font-size: 32px;
+    }
+
+    & .search--div {
+      max-width: 420px;
+    }
+    & .card {
+      flex-direction: row;
+    }
+
+    & .col-md-5 {
+      flex: 0 0 41.6666666667%;
+      max-width: 41.6666666667%;
+    }
+
+    & .card-img,
+    .card-img-top {
+      // height: 330px;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 10px;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    & .col-md-7 {
+      padding-bottom: 0;
+    }
+
+    & .card-title {
+      margin-bottom: 0;
+    }
+
+    & .title--detail {
+      flex-direction: row;
+      height: 40px;
+
+      & i {
+        margin-left: 5px;
+      }
+    }
+
+    & .stay {
+      margin-top: 30px;
+    }
+
+    & .pages .accommodation--button button {
+      width: 210px;
+      margin-bottom: 0;
+      border: 2px solid $colour-primary;
+
+      &:hover {
+        border: 2px solid $colour-secondary;
+      }
+    }
+  }
+}
+
+body.dark {
+  .accommodations--page h2 {
+    color: $colour-primary;
+    font-size: 21px;
+  }
+
+  .accommodations--page .card:hover {
+    transform: none;
+  }
+
+  .accommodations--page .card .type {
+    color: $colour-primary;
+  }
+
+  @media (min-width: $tablet-width) {
+    .accommodations--page h2 {
+      font-size: 32px;
+    }
+  }
+}
+
+// .pages {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 24px;
+// }
+
+// .accommodation--box {
+//   width: 100%;
+// }
+
+// .dark--card {
+//   display: grid;
+//   grid-template-columns: 380px 1fr;
+//   width: 100%;
+//   min-height: 260px;
+//   border-radius: 10px;
+//   overflow: hidden;
+// }
+
+// .dark--card img {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
+
+// .dark--card .col-md-5,
+// .dark--card .col-md-7 {
+//   width: 100%;
+//   max-width: 100%;
+// }
+
+// .dark--card .col-md-7 {
+//   padding: 28px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+// }
+
+// .accommodation--button button {
+//   min-width: 180px;
+// }

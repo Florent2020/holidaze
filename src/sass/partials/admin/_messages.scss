@@ -1,0 +1,155 @@
+// Messages page on Admin
+
+.messages--admin {
+  padding: 0;
+
+  & .messages--page {
+    background-color: rgba(38, 38, 38, 0.7);
+    padding: 25px;
+    border-radius: 5px;
+    min-height: 100vh;
+  }
+
+  & .row {
+    padding-left: 15px;
+    margin-top: 40px;
+  }
+
+  & .messages--width {
+    width: 100%;
+  }
+
+  & .messages--table {
+    background-color: #c3c3c3;
+    margin-bottom: 10px;
+    padding: 10px 0;
+
+    & .hotels--admin .col-sm-12,
+    .hotels--admin .col-md-7,
+    .hotels--admin .col-lg-3,
+    .hotels--admin .col-lg-2 {
+      display: grid;
+      align-items: center;
+    }
+
+    & h5,
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  & .message--link {
+    display: flex;
+    color: $colour-secondary;
+    align-items: center;
+  }
+
+  & .empty--message {
+    color: $colour-heading;
+  }
+}
+
+body.dark {
+  .messages--admin .messages--table {
+    background-color: #272b30;
+  }
+
+  & .messages--admin .message--link {
+    color: $colour-heading;
+  }
+}
+
+// View Messages page
+
+.view--message {
+  padding: 0;
+
+  & .view--message__page {
+    background-color: rgba(38, 38, 38, 0.7);
+    padding: 50px 20px;
+    border-radius: 5px;
+    min-height: 100vh;
+  }
+
+  & form {
+    background: $colour-secondary;
+    border-radius: 5px;
+    padding: 25px;
+    box-shadow: 0 0px 2px #c0c0c0;
+    color: $colour-heading;
+    margin-top: 40px;
+
+    & a {
+      color: $colour-heading;
+      font-size: 13px;
+      padding-left: 0;
+      font-style: italic;
+      margin-bottom: 20px;
+      text-transform: none;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+        color: $colour-error;
+      }
+    }
+
+    & div {
+      margin-bottom: 50px;
+    }
+
+    & button {
+      width: 100%;
+      padding: 3px 13px;
+      border-radius: 0;
+      outline: none;
+      margin-right: 10px;
+      margin-top: 10px;
+      font-size: 14px;
+      border: 2px solid $colour-primary;
+      text-transform: capitalize;
+    }
+
+    & .delete--message {
+      background-color: $colour-error;
+      border: 2px solid $colour-error;
+      color: $colour-heading;
+      border-radius: 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    & i {
+      margin-right: 5px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .messages--admin {
+    padding: 70px 0;
+    & .messages--page {
+      min-height: auto;
+    }
+
+    & .messages--page {
+      padding: 50px;
+    }
+  }
+
+  .view--message {
+    padding: 70px 0;
+
+    & .view--message__page {
+      padding: 50px;
+      min-height: auto;
+    }
+
+    & form button {
+      width: auto;
+      margin-top: 0;
+    }
+  }
+}

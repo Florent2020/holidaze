@@ -1,0 +1,48 @@
+$colour-primary: #d7b600;
+$colour-secondary: #262626;
+$colour-header: #002039;
+$colour-heading: #e4e6e8;
+$colour-error: #c53131;
+
+$light-background-color: #fff;
+$light-text-color: #262626;
+
+$dark-background-color: #090909;
+$dark-text-color: #fff;
+
+$heading-font-family: "Notable", sans-serif;
+$SubHeading-font-family: "Marcellus", serif;
+$body-font-family: "Gotu", sans-serif;
+
+$tablet-width: 992px;
+$mobile-width: 768px;
+
+// MY TASK
+@import "~bootstrap/scss/bootstrap";
+@import "./partials/layout/layout";
+@import "./partials/typography/typography";
+@import "./partials/layout/nav";
+@import "./partials/homePage/infoHeader";
+@import "./partials/layout/darkMode";
+@import "./partials/homePage/jumbotron";
+@import "./partials/homePage/accommodation";
+@import "./partials/accommodationDetails/accommodationDetails";
+@import "./partials/accommodationPage/accommodations";
+@import "./partials/homePage/searchHome";
+@import "./partials/homePage/pagination";
+@import "./partials/homePage/ourGuarantees";
+@import "./partials/homePage/thingsToDo";
+@import "./partials/contactForm/contactForm";
+@import "./partials/booking/bookingEnquiry";
+@import "./partials/login/login";
+@import "./partials/admin/dashboard";
+@import "./partials/admin/adminPage";
+@import "./partials/admin/edit";
+@import "./partials/admin/add";
+@import "./partials/admin/messages";
+@import "./partials/admin/enquiries";
+@import "./partials/admin/deleteAlertButton";
+@import "./partials/layout/footer";
+@import "./partials/layout/loader";
+@import "./partials/layout/errorMessage";
+@import "./partials/favourite/FavouritePage";
