@@ -21,6 +21,7 @@ The project allows users to browse accommodations, view details, and send bookin
 ## 🛠️ Tech Stack
 
 **Frontend:**
+<<<<<<< HEAD
 
 - React (Create React App)
 - Styled Components / Sass
@@ -41,3 +42,22 @@ Clone the repository:
 ```bash
 git clone https://github.com/Florent2020/holidaze.git
 ```
+=======
+- React (Create React App)
+- Styled Components / Sass
+- React Router
+- React Bootstrap
+
+**Backend:**
+- WordPress (Headless CMS)
+- Custom REST API endpoints
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Florent2020/holidaze.git
+>>>>>>> 02b3a3d38f37e40274bf7c0485d3d6be74f09713
